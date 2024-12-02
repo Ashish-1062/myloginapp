@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+	height: 100vh;
+	background: linear-gradient(135deg, #f3f4f6, #dbe9f1);
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+/* Sticky Navbar */
+.navbar {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	padding: 16px 20px;
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	backdrop-filter: blur(8px);
+}
+
+.navbar h1 {
+	font-size: 1.5rem;
+	margin: 0;
+	font-weight: 600;
+	color: #4285f4;
+}
+
+.navbar .auth-btn {
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+	background-color: #4285f4;
+	color: white;
+	font-weight: bold;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.navbar .auth-btn:hover {
+	background-color: #357ae8;
+}
+
+.navbar .theme-toggle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 24px;
+	margin-right: 50px;
+	background-color: #8a8a8a;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	position: relative;
+}
+
+.navbar .theme-toggle.active {
+	background-color: #000000;
+}
+
+.navbar .theme-toggle::after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border-radius: 50%;
+	transition: transform 0.3s ease;
+}
+
+.navbar .theme-toggle.active::after {
+	transform: translateX(26px);
+}
+
+/* Main Container */
+.main-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	margin-top: 80px;
+}
+
+/* Card Style for Input Section */
+.card {
+	background-color: white;
+	padding: 40px;
+	width: 100%;
+	max-width: 400px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.card h2 {
+	margin-bottom: 20px;
+	font-size: 1.8rem;
+}
+
+.input-field {
+	margin-bottom: 16px;
+	padding: 12px;
+	width: 100%;
+	max-width: 350px;
+	border: 1px solid #ddd;
+	border-radius: 24px;
+	font-size: 1rem;
+	color: #333;
+	transition: border 0.3s ease;
+}
+
+.input-field:focus {
+	outline: none;
+	border-color: #4285f4;
+}
+
+.button1 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 24px;
+	background-color: #6ca2f9;
+	color: white;
+	border: none;
+	border-radius: 24px;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 60;
+	transition: background-color 0.3s ease;
+	width: 100%;
+	max-width: 400px;
+}
+
+.button2 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 12px 24px;
+	margin-top: 50px;
+	background-color: #6ca2f9;
+	color: white;
+	border: none;
+	border-radius: 24px;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 60;
+	transition: background-color 0.3s ease;
+	width: 100%;
+	max-width: 400px;
+}
+.profile-image {
+	width: 200px;
+}
+
+.button img {
+	width: 20px;
+	height: 20px;
+	margin-right: 20px;
+}
+.icon {
+	width: 25px;
+	height: 25px;
+	margin-right: 20px;
+}
+.button:hover {
+	background-color: #357ae8;
+}
+
+/* Light and Dark Mode Styles */
+.light-mode {
+	background: linear-gradient(135deg, #f3f4f6, #dbe9f1);
+	color: #333;
+}
+
+.dark-mode {
+	background: linear-gradient(135deg, #121212, #333333);
+	color: #e0e0e0;
+}
+
+.dark-mode .card {
+	margin-top: 0;
+	padding-top: 0;
+	height: 480px;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+}
+
+@media (max-width: 600px) {
+	.card {
+		width: 80%;
+		padding: 10px 20px;
+
+		margin-top: 0;
+	}
+
+	.input-field {
+		width: 70%;
+	}
+	.button1 {
+		width: 100%;
+	}
+	.navbar h1 {
+		font-size: 1.2rem;
+	}
+}
